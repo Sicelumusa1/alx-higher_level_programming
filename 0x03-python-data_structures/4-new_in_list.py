@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
-    if my_list is None or my_list == 0:
+    if my_list is None or len(my_list) == 0:
         return None
 
     if idx < 0 or idx > len(my_list) - 1:
