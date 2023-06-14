@@ -4,9 +4,8 @@ def best_score(a_dictionary):
         return None
     best_key = None
     best_score = 0
-
     for key, value in a_dictionary.items():
-        if value is  None:
+        if value is None:
             return None
         if value > best_score:
             best_key = key
