@@ -9,5 +9,5 @@ def square_matrix_simple(matrix=[]):
         row = []
         for y in x:
             row.append(y**2)
-        new_matrix.append(row) 
+        new_matrix.append(row)
     return new_matrix
