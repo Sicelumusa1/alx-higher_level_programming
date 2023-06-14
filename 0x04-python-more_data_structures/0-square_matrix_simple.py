@@ -3,7 +3,7 @@ def square_matrix_simple(matrix=[]):
     if matrix is None or len(matrix) == 0:
         return None
     if len(matrix) == 1 or len(matrix[0]) == 0:
-        return None
+        return []
     new_matrix = []
     for x in matrix:
         row = []
