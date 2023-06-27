@@ -41,7 +41,10 @@ class Square:
         Modifies the value of the square size
 
         Args:
-            value (int): has to be int and > 0
+            value (int):The new size value has to be int and > 0
+        Raises:
+            TypeError: if the value is not an integer.
+            ValueError; if  the value is less than 0.
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -53,13 +56,15 @@ class Square:
         """
         Calculates the area of a square.
 
-        Returns Area
+        Returns:
+            int: The area of the square
         """
         return self.__size ** 2
-    
+
     def my_print(self):
         """
         Prints the square using '#' character
+        If the siz eis 0, prints an empty line
         """
         if self.__size == 0:
             print()

@@ -32,6 +32,7 @@ class Square:
         """
         Calculates the area of a square.
 
-        Return Area.
+        Returns:
+            int: The area of the square.
         """
         return self.__size ** 2
