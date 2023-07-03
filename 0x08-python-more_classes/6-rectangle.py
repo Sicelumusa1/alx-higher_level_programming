@@ -5,7 +5,7 @@
 class Rectangle:
     """
     A class representing a Rectangle
-    
+
     Attributes:
         width (int): the width of a rectangle
         height (int): the height of a rectangle
@@ -27,7 +27,7 @@ class Rectangle:
     @property
     def width(self):
         """
-        Retrieves the value of the given width 
+        Retrieves the value of the given width
 
         Raises:
             TypeError: if the width is not an integer

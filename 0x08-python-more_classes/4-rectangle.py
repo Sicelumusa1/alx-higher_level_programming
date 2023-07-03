@@ -5,7 +5,7 @@
 class Rectangle:
     """
     A class representing a Rectangle
-    
+
     Attributes:
         width (int): the width of a rectangle
         height (int): the height of a rectangle
@@ -25,7 +25,7 @@ class Rectangle:
     @property
     def width(self):
         """
-        Retrieves the value of the given width 
+        Retrieves the value of the given width
 
         Raises:
             TypeError: if the width is not an integer
@@ -111,7 +111,7 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.__width + self.__height)
-    
+
     def __str__(self):
         """
         Return string representation of the rectangle
@@ -133,7 +133,7 @@ class Rectangle:
         new instance using eval()
 
         Returns:
-            str: string representation of the rectangle in format 
+            str: string representation of the rectangle in format
                 Rectangle(width, height)
         """
         return f"Rectangle({self.__width}, {self.__height})"
