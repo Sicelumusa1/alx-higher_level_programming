@@ -5,7 +5,7 @@
 class Rectangle:
     """
     A class representing a Rectangle
-    
+
     Attributes:
         width (int): the width of a rectangle
         height (int): the height of a rectangle
@@ -25,7 +25,7 @@ class Rectangle:
     @property
     def width(self):
         """
-        Retrieves the value of the given width 
+        Retrieves the value of the given width
 
         Raises:
             TypeError: if the width is not an integer
@@ -34,6 +34,10 @@ class Rectangle:
         Return:
             width (int)
         """
+        if not isinstance(self.__width, int):
+            raise TypeError("width must be an integer")
+        if self.__width < 0:
+            raise ValueError("width must be >= 0")
         return self.__width
 
     @width.setter
@@ -66,9 +70,9 @@ class Rectangle:
         Return:
             height (int)
         """
-        if not isinstance(height, int):
+        if not isinstance(self.__height, int):
             raise TypeError("height must be an integer")
-        if height < 0:
+        if self.__height < 0:
             raise ValueError("height must be >= 0")
         return self.__height
 
@@ -101,7 +105,7 @@ class Rectangle:
 
     def perimeter(self):
         """
-        Computes the perimeter of a rectangle by multiplying 2 by sum 
+        Computes the perimeter of a rectangle by multiplying 2 by sum
         of width and height
 
         Returns:
