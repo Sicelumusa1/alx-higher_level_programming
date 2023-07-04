@@ -1,0 +1,38 @@
+# Test cases for add_integer.py module
+
+# Using add_integer:
+
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(5, 6)
+11
+
+>>> add_integer(4, -2)
+2
+
+>>> add_integer(-2, -3)
+-5
+
+>>> add_integer(-5, 2.5)
+-3
+
+>>> add_integer(2)
+100
+
+#Test cases for handling exceptions:
+
+>>> add_integer("Hello", "World")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+#test case: when 'b' is not an integer
+>>> add_integer(4, "abc")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+#test case when 'a' is None
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
