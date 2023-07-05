@@ -3,6 +3,7 @@
 Defines a function that prints a name
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     Prints the name (first name and last name) given.

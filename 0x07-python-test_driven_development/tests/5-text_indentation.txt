@@ -1,0 +1,56 @@
+
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Gabuza?")
+Gabuza?
+<BLANKLINE>
+
+>>> text_indentation("Gabuza.")
+Gabuza.
+<BLANKLINE>
+
+>>> text_indentation("Gabuza:")
+Gabuza:
+<BLANKLINE>
+
+#ignore the whitespaces
+>>> text_indentation("   ")
+
+>>> text_indentation("   Gabuza:")
+Gabuza:
+<BLANKLINE>
+
+>>> text_indentation("  Sicelumusa Blessing.  Gabuza driefontain Ladysmith:")
+Sicelumusa Blessing.
+<BLANKLINE>
+Gabuza driefontain Ladysmith:
+<BLANKLINE>
+
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation({"Sicelumusa": 34, "Tino": 10, "Kabo": 4})
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+#indenting newlines
+>>> text_indentation("Sicelumusa\nGabuza:")
+Sicelumusa
+Gabuza:
+<BLANKLINE>
+
+>>> text_indentation("Sicelumusa\n\n\n\nGabuza:")
+Sicelumusa
+<BLANKLINE>
+<BLANKLINE>
+<BLANKLINE>
+Gabuza:
+<BLANKLINE>

@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a function that prints a squire"""
 
+
 def print_square(size):
     """
     Prints a quare with the character #.
@@ -19,7 +20,7 @@ def print_square(size):
     if isinstance(size, float):
         raise TypeError('size must be an integer')
 
-    if  size < 0:
+    if size < 0:
         raise ValueError('size must be >= 0')
 
     if size == 0:
