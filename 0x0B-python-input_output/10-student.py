@@ -21,15 +21,15 @@ class Student:
     def to_json(self, attrs=None):
         """
         Retrieves a dictionery representation of a student
-        
+
         Args:
             attrs (list): list of attribute names to retrieve
 
         Returns:
             dictionary representation of a student
         """
-        if attrs is None:   #retrieve all attributes
+        if attrs is None:   # retrieve all attributes
             return self.__dict__
-        else: #retrieve the specified attributes
-            return {attr: getattr(self, attr) 
+        else:   # retrieve the specified attributes
+            return {attr: getattr(self, attr)
                     for attr in attrs if hasattr(self, attr)}
