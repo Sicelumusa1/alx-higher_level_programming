@@ -9,13 +9,13 @@ class Rectangle {
     this.width = w;
     this.height = h;
   }
-  
-  print() {
+
+  print () {
     if (!this.width || !this.height) {
       console.log('');
     } else {
       for (let i = 0; i < this.height; i++) {
-	console.log('X'.repeat(this.width));
+        console.log('X'.repeat(this.width));
       }
     }
   }
