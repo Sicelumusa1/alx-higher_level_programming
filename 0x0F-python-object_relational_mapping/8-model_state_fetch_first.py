@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This script lists all State objects from the hbtn_0e_6_usa database
+This script lists the first State objects from the hbtn_0e_6_usa database
 """
 
 import sys
@@ -26,9 +26,12 @@ if __name__ == '__main__':
     session = Session()
 
     #  Query and print all state objects sorted by id
-    states = session.query(State).order_by(State.id).all()
-    for state in states:
+    state = session.query(State).order_by(State.id).first()
+    
+    if state:
         print(f"{state.id}: {state.name}")
+    else:
+        print("Nothing")
 
     #  free resources
     session.close()

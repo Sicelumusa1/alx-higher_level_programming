@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This script lists all State objects from the hbtn_0e_6_usa database
+This script adds the State object "Louisiana"hbtn_0e_6_usa database
 """
 
 import sys
@@ -25,10 +25,15 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    #  Query and print all state objects sorted by id
-    states = session.query(State).order_by(State.id).all()
-    for state in states:
-        print(f"{state.id}: {state.name}")
+    #  Create a new State object for Louisiana
+    new_state = State(name="Louisiana")
+
+    #  Add the new state to the database
+    session.add(new_state)
+    session.commit()
+
+    #  Print the new state's ID
+    print(new_state.id)
 
     #  free resources
     session.close()

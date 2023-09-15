@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-This script lists all State objects from the hbtn_0e_6_usa database
+This script changes the name of a State object in the 
+hbtn_0e_6_usa database
 """
 
 import sys
@@ -25,10 +26,13 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    #  Query and print all state objects sorted by id
-    states = session.query(State).order_by(State.id).all()
-    for state in states:
-        print(f"{state.id}: {state.name}")
+    #  Query the State objects with id = 2 and change its name to "New Mexico"
+    state_to_update = session.query(State).filter_by(id=2).first()
+    if state_to_update:
+        state_to_update.name = "New Mexico"
+        session.commit()
+    else:
+        print("State with id 2 not found")
 
     #  free resources
     session.close()

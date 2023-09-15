@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-This script lists all State objects from the hbtn_0e_6_usa database
+This script prints the State object with the given name from the 
+hbtn_0e_6_usa database
 """
 
 import sys
@@ -16,6 +17,7 @@ if __name__ == '__main__':
     username = sys.argv[1]
     password = sys.argv[2]
     database_name = sys.argv[3]
+    state_name = sys.argv[4]
 
     #  Database connection URI
     DATABASE_URI = f'mysql://{username}:{password}@localhost:3360/{database_name}'
@@ -26,9 +28,11 @@ if __name__ == '__main__':
     session = Session()
 
     #  Query and print all state objects sorted by id
-    states = session.query(State).order_by(State.id).all()
-    for state in states:
-        print(f"{state.id}: {state.name}")
+    state = session.query(State).filter_by(name=state_name).first()
+    if state:
+        print(state.id)
+    else:
+        print("Not found")
 
     #  free resources
     session.close()
