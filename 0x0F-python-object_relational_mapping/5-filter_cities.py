@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""
+This script connects to a MySQL database and retrieves a comma-separated
+string of cities belonging to a specified state
+"""
+
 import MySQLdb
 import sys
 
