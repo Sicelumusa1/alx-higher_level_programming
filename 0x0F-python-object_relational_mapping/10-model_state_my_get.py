@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This script prints the State object with the given name from the 
+This script prints the State object with the given name from the
 hbtn_0e_6_usa database
 """
 

@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     #  Query and print all state objects sorted by id
     state = session.query(State).order_by(State.id).first()
-    
+
     if state:
         print(f"{state.id}: {state.name}")
     else:

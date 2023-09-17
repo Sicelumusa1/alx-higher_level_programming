@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-This script changes the name of a State object in the 
+This script changes the name of a State object in the
 hbtn_0e_6_usa database
 """
 
