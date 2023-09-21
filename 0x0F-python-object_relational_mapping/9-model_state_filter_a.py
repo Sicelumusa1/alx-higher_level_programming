@@ -19,7 +19,9 @@ if __name__ == '__main__':
     database_name = sys.argv[3]
 
     #  Database connection URI
-    DATABASE_URI = f'mysql://{username}:{password}@localhost:3360/{database_name}'
+    DATABASE_URI = (
+        f'mysql://{username}:{password}@localhost:3360/{database_name}'
+    )
     engine = create_engine(DATABASE_URI)
 
     #  Create a session
@@ -27,7 +29,8 @@ if __name__ == '__main__':
     session = Session()
 
     #  Query and print all state objects sorted by id
-    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    states = session.query(State).filter(State.name.like('%a%'))\
+        .order_by(State.id).all()
 
     for state in states:
         print(f"{state.id}: {state.name}")

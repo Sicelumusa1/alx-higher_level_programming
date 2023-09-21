@@ -18,7 +18,9 @@ if __name__ == '__main__':
     database_name = sys.argv[3]
 
     #  Database connection URI
-    DATABASE_URI = f'mysql://{username}:{password}@localhost:3360/{database_name}'
+    DATABASE_URI = (
+        f'mysql://{username}:{password}@localhost:3360/{database_name}'
+    )
     engine = create_engine(DATABASE_URI)
 
     #  Create a session
