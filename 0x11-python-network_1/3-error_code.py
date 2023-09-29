@@ -20,7 +20,7 @@ def fetch_url_content(url):
     """
     try:
         with urllib.request.urlopen(url) as response:
-            content = request.read().decode('utf-8')
+            content = response.read().decode('utf-8')
             print(content)
     except urllib.error.HTTPError as e:
         print("Error code:", e.code)
