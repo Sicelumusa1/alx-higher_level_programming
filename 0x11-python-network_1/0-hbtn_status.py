@@ -19,12 +19,13 @@ def fetch_url_content(url):
             content = response.read()
             content_str = content.decode('utf-8')
 
-            print("Body responce:")
+            print("Body response:")
             print("\t- type:", type(content))
             print("\t- content:", content)
             print("\t- utf8 content:", content_str)
     except urllib.error.URLError as e:
         print("Error:", e)
+
 
 if __name__ == "__main__":
     #  Define the URL to fetch

@@ -13,7 +13,7 @@ def get_x_request_id(url):
     """
     Sends a request to the URL and displays the value of the X-Request-Id
     variable found in the header of the response, and display it.
-    
+
     Args:
         url (str): The URL to send the request to
     """
@@ -24,6 +24,7 @@ def get_x_request_id(url):
                 print(x_request_id)
     except urllib.error.URLError as e:
         print("Error:", e)
+
 
 if __name__ == "__main__":
     #  Check if a URL argument is provided

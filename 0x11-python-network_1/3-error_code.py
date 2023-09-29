@@ -12,7 +12,7 @@ import sys
 
 def fetch_url_content(url):
     """
-    Sends a request to the URL and displays the body of the response 
+    Sends a request to the URL and displays the body of the response
     (decoded in utf-8). Handles urllib.error.HTTPError exceptions
 
     Args:
@@ -24,6 +24,7 @@ def fetch_url_content(url):
             print(content)
     except urllib.error.HTTPError as e:
         print("Error code:", e.code)
+
 
 if __name__ == "__main__":
     #  Check if a URL argument is provided
