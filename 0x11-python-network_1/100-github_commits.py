@@ -10,7 +10,7 @@ import sys
 
 def fetch_recent_commits(repo_name, owner_name):
     """
-    Fetches the 10 most recent commits from agithub repository by 
+    Fetches the 10 most recent commits from agithub repository by
     the given user
 
     Args:
@@ -34,6 +34,7 @@ def fetch_recent_commits(repo_name, owner_name):
             print("No commits found")
     except requests.exceptions.RequestException as e:
         print("Error:", e)
+
 
 if __name__ == "__main__":
     repo_name = sys.argv[1]
