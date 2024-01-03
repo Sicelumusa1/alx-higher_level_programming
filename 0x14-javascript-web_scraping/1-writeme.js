@@ -7,5 +7,4 @@ fs.writeFile(process.argv[2], process.argv[3], 'utf-8', (err, data) => {
     console.error(err);
     return;
   }
-  console.log('File saved');
 });
